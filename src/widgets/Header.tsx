@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <div className="fixed top-0 left-0 z-50 w-full">
-      <header className="flex w-full max-w-336 justify-between items-center mx-auto bg-blue-bg">
+      <header className="flex w-full max-w-336 justify-between items-center mx-auto bg-transparent">
         <a
           href="#top"
           className="px-6 py-8 md:px-10 md:py-12 lg:py-8 hover:scale-110 active:opacity-25 transition-all duration-300"
@@ -35,7 +35,7 @@ export default function Header() {
           type="button"
           className="flex lg:hidden justify-center items-center px-6 py-8 md:px-10 md:py-12 hover:opacity-50 active:opacity-25 transition-opacity duration-300 cursor-pointer"
           aria-expanded={isMenuOpen}
-          aria-label="Open Mobile Menu"
+          aria-label="Toggle Mobile Menu"
           onClick={toggleMenu}
         >
           <Icon
