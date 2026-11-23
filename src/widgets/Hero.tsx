@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="hero-section"
       aria-describedby="hero-heading"
-      className="w-full flex justify-center items-center px-6 md:px-10 pt-34 md:pt-38.25 lg:pt-46 pb-35 md:pb-81.5 bg-[url('/img/mobile/image-header.jpg')] md:bg-[url('/img/desktop/image-header.jpg')] bg-cover bg-center bg-no-repeat"
+      className="w-full max-w-360 flex justify-center items-center px-6 md:px-10 pt-34 md:pt-38.25 lg:pt-46 pb-35 md:pb-81.5 bg-[url('/img/mobile/image-header.jpg')] md:bg-[url('/img/desktop/image-header.jpg')] bg-cover bg-center bg-no-repeat"
     >
       <div className="flex flex-col justify-center items-center gap-12 md:gap-18 lg:gap-24 max-w-103.5 lg:max-w-auto lg:text-nowrap">
         <h1
