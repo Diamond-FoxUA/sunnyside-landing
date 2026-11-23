@@ -25,7 +25,7 @@ export default function StandOutSection() {
 
       <div className="flex flex-col gap-6 md:gap-8 justify-center items-center px-6 md:[158.5px] py-[67.5px] md:max-w-125">
         <h2
-          id="transform-heading"
+          id="stand-out-heading"
           className="font-fraunces text-[32px] font-black leading-[125%] text-grey-950 text-center md:max-w-70"
         >
           Stand out to the right audience
