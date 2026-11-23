@@ -1,6 +1,7 @@
 import Header from "@/widgets/Header";
 import Hero from "@/widgets/Hero";
 import TransformSection from "@/widgets/TransformSection";
+import StandOutSection from "@/widgets/StandOutSection";
 import Footer from "@/widgets/Footer";
 import { Toaster } from "sonner";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <main className="flex flex-col flex-1 items-center justify-center w-full">
         <Hero />
         <TransformSection />
+        <StandOutSection />
       </main>
       <Footer />
 
