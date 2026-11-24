@@ -26,6 +26,7 @@ export default function PhotographySection() {
     <div className="w-full max-w-360 flex flex-col lg:grid lg:grid-cols-2">
       {PHOTOGRAPHY_SECTION_DATA.map((data) => (
         <section
+          data-header-theme={data.label === "design" ? "green" : null}
           key={data.id}
           id={data.id}
           aria-describedby={`${data.label}-heading`}

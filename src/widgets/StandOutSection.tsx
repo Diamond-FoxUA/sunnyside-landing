@@ -5,6 +5,7 @@ export default function StandOutSection() {
     <section
       id="stand-out"
       aria-describedby="stand-out-heading"
+      data-header-theme="red"
       className="flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center w-full max-w-360 items-center justify-center scroll-mt-24"
     >
       <div className="w-full">
