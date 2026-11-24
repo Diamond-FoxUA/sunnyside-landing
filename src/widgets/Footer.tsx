@@ -1,3 +1,5 @@
+"use client";
+
 import { NAV_ITEMS } from "@/shared/constants/navigation";
 import { SOCIAL_LINKS } from "@/shared/constants/socials";
 
@@ -5,6 +7,11 @@ import Icon from "@/shared/ui/Icon";
 import Link from "next/link";
 
 export default function Footer() {
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="flex justify-center items-center w-full py-[73.5px] px-[38.5px] bg-green-300">
       <div className="flex flex-col gap-10 w-full max-w-74.5 justify-center items-center ">
@@ -12,6 +19,7 @@ export default function Footer() {
           href="#top"
           aria-label="Back to top"
           className="hover:scale-110 transition-transform duration-300"
+          onClick={scrollToTop}
         >
           <Icon
             iconName="icon-logo"

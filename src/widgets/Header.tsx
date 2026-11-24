@@ -64,6 +64,11 @@ export default function Header() {
 
   const activeTheme: HeaderTheme = isScrolled ? sectionTheme : "default";
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div
       className={`fixed top-0 left-[50%] translate-x-[-50%] z-50 w-full max-w-360 ${HEADER_THEMES[activeTheme]} transition-all duration-300`}
@@ -75,6 +80,7 @@ export default function Header() {
           href="#top"
           className="px-6 py-8 md:px-10 md:py-12 lg:py-8 hover:scale-110 active:opacity-25 transition-all duration-300"
           aria-label="Back to top"
+          onClick={scrollToTop}
         >
           <Icon
             iconName="icon-logo"

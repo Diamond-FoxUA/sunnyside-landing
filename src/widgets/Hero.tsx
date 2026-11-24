@@ -1,6 +1,22 @@
+"use client";
 import Icon from "@/shared/ui/Icon";
 
 export default function Hero() {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionID: string,
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionID);
+    if (!element) return;
+
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+  };
+
   return (
     <section
       id="hero-section"
@@ -18,6 +34,7 @@ export default function Hero() {
         <a
           href="#transform"
           className="hover:opacity-50 px-5 active:opacity-25 transition-opacity duration-300"
+          onClick={(e) => scrollToSection(e, "transform")}
         >
           <Icon
             iconName="icon-arrow-down"
