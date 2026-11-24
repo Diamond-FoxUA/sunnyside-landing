@@ -5,7 +5,7 @@ export default function TransformSection() {
     <section
       id="transform"
       aria-describedby="transform-heading"
-      className="flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center w-full max-w-360 items-center justify-center scroll-mt-24"
+      className="flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center w-full max-w-360 items-center justify-center scroll-mt-27"
     >
       <div className="w-full lg:order-last">
         <picture>
