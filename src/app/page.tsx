@@ -4,6 +4,7 @@ import TransformSection from "@/widgets/TransformSection";
 import StandOutSection from "@/widgets/StandOutSection";
 import PhotographySection from "@/widgets/PhotographySection";
 import TestimonialsSection from "@/widgets/TestimonialsSection";
+import GallerySection from "@/widgets/GallerySection";
 import Footer from "@/widgets/Footer";
 import { Toaster } from "sonner";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <StandOutSection />
         <PhotographySection />
         <TestimonialsSection />
+        <GallerySection />
       </main>
       <Footer />
 
