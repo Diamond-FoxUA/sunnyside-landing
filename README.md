@@ -1,48 +1,112 @@
-# Next.js Clean Starter Template
+# Frontend Mentor - Sunnyside agency landing page solution
 
-An optimized, lightweight production-ready starter template for building modern web applications using **Next.js 16**, **Tailwind CSS v4**, and **TypeScript**. This setup is fully configured for **100% offline development** using `pnpm`.
+This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## 📐 Architecture
+## Table of contents
 
-This project follows **Feature-Driven Architecture (FDA)** principles to ensure strict code isolation, maintainability, and scalability. All core logic lives inside the `src/` directory, broken down into standardized layers:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
 
-- `src/app/` — Global configurations, providers, styles, and Next.js App Router layout/page definitions.
-- `src/pages/` — Composition layer for full-screen application views.
-- `src/widgets/` — Self-contained, structural UI blocks (e.g., `Header`, `Footer`, `Sidebar`).
-- `src/features/` — User interactions that bring business value (e.g., `AuthForm`, `LanguageSwitcher`).
-- `src/entities/` — Core business models, components, and state (e.g., `UserCard`, `ProductRow`).
-- `src/shared/` — Reusable, decoupled assets, UI primitives (`shared/ui`), API clients, and custom React hooks.
+## Overview
 
-## 🛠 Offline Setup & Usage
+### The challenge
 
-Since all modules are pre-cached in your local global store (`~/development/pnpm-store`), you can spin up brand-new projects completely without an internet connection.
+Users should be able to:
 
-### Creating a New Project from this Template:
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- See a toast message on button click
 
-1. Duplicate this template directory:
-   ```bash
-   cp -R next-clean-template my-new-project
-   ```
-2. Navigate into the new folder and mount the offline dependencies instantly:
-   ```bash
-   cd my-new-project
-   pnpm i --offline
-   ```
+### Screenshot
 
-## ⚡ Available CLI Scripts
+![](./screenshot.jpg)
 
-All commands must be executed from the project root:
+### Links
 
-- `pnpm dev` — Starts the local Next.js development server with Turbopack enabled on [http://localhost:3000](http://localhost:3000).
-- `pnpm build` — Compiles the application for production deployment.
-- `pnpm start` — Starts the production Node.js server.
-- `pnpm lint` — Runs ESLint checks to enforce clean code standards.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## 🔗 Absolute Imports Configuration
+## My process
 
-Path aliases are pre-configured in `tsconfig.json`. You can cleanly import your codebase modules using the `@/*` absolute paths from anywhere:
+### Built with
 
-```typescript
-import { Button } from "@/shared/ui";
-import { Header } from "@/widgets/header";
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Sonner](https://ui.shadcn.com/docs/components/radix/sonner)
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+
+### What I learned
+
+First of all, this project was a great way to practice my frontend development skills and expand my portfolio. I showcased my strengths in working with metadata, SEO, and a11y (accessibility). I also learned how to use the Intersection Observer API to dynamically change the header's background color depending on which section is currently visible on the screen:
+
 ```
+useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 70);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    const sections = document.querySelectorAll<HTMLElement>(
+      "[data-header-theme]",
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const newTheme = entry.target.getAttribute(
+              "data-header-theme",
+            ) as HeaderTheme;
+            if (newTheme && HEADER_THEMES[newTheme]) {
+              setSectionTheme(newTheme);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "-80px 0px -85% 0px",
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
+  }, []);
+```
+
+### Continued development
+
+Moving forward, I want to keep pushing myself to build more complex projects that combine frontend, TypeScript, and backend development.
+
+### Useful resources
+
+- [DevDocs](https://devdocs.io/) -  An essential resource for reading documentation offline when power outages are part of your daily schedule.
+
+### AI Collaboration
+
+- I used Gemini to learn how to use an observer for tracking sections.
+- It covered the basics and gave me some examples, which I improved by adjusting the observer's offset positioning.
+  
+## Author
+
+- Website - [Dmytro Farbun](https://my-portfolio-main-eta-jade.vercel.app/)
+- Frontend Mentor - [@Diamond-FoxUA](https://www.frontendmentor.io/profile/Diamond-FoxUA)
+- LinkedIn - [@dmytro-farbun](https://www.linkedin.com/in/dmytro-farbun)
