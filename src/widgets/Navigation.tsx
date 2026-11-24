@@ -1,3 +1,4 @@
+import { showPortfolioToast } from "@/shared/lib/toast/showPortfolioToast";
 import { NAV_ITEMS } from "@/shared/constants/navigation";
 
 type NavigationProps = {
@@ -24,9 +25,7 @@ export default function Navigation({ onClose }: NavigationProps) {
             type="button"
             aria-label="Show author contacts via notification"
             className="font-fraunces text-gray-950 text-[15px] font-black leading-[165%] tracking-[0.07em] uppercase bg-yellow-500 lg:bg-white py-3.75 px-9.25 lg:px-[27.5px] rounded-[28px] hover:opacity-50 active:opacity-25 transition-opacity duration-300 cursor-pointer"
-            onClick={() => {
-              alert("My contact info");
-            }}
+            onClick={showPortfolioToast}
           >
             Contact
           </button>
