@@ -74,7 +74,7 @@ export default function Header() {
       className={`fixed top-0 left-[50%] translate-x-[-50%] z-50 w-full max-w-360 ${HEADER_THEMES[activeTheme]} transition-all duration-300`}
     >
       <header
-        className={`flex w-full max-w-336 justify-between items-center mx-auto`}
+        className={`flex w-full justify-between items-center mx-auto`}
       >
         <a
           href="#top"
