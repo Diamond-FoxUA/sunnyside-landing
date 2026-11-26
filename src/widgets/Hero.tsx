@@ -42,6 +42,7 @@ export default function Hero() {
           href="#transform"
           className="hover:opacity-50 px-5 active:opacity-25 transition-opacity duration-300"
           onClick={(e) => scrollToSection(e, "transform")}
+          aria-label="Scroll to Transform your brand"
         >
           <Icon
             iconName="icon-arrow-down"

@@ -1,14 +1,17 @@
 export const NAV_ITEMS = [
   {
-    id: "about",
+    id: 1,
     title: "About",
+    href: "#",
   },
   {
-    id: "services",
+    id: 2,
     title: "Services",
+    href: "#",
   },
   {
-    id: "projects",
+    id: 3,
     title: "Projects",
+    href: "#",
   },
 ];
