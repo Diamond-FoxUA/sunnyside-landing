@@ -8,6 +8,8 @@ type MobileMenuProps = {
 export default function MobileMenu({ isMenuOpen, onClose }: MobileMenuProps) {
   return (
     <div
+      id="mobile-menu"
+      inert={!isMenuOpen}
       className={`absolute z-50 lg:hidden top-18 px-6 md:px-10 w-full ${isMenuOpen ? "max-h-fit pt-10 md:pt-15 opacity-100 pointer-events-auto" : "max-h-0 pt-0 opacity-0 pointer-events-none"} transition-all duration-300`}
     >
       <div

@@ -66,16 +66,22 @@ export default function Header() {
 
   const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
   };
 
   return (
     <div
       className={`fixed top-0 left-[50%] translate-x-[-50%] z-50 w-full max-w-360 ${HEADER_THEMES[activeTheme]} transition-all duration-300`}
     >
-      <header
-        className={`flex w-full justify-between items-center mx-auto`}
-      >
+      <header className={`flex w-full justify-between items-center mx-auto`}>
         <a
           href="#top"
           className="px-6 py-8 md:px-10 md:py-12 lg:py-8 hover:scale-110 active:opacity-25 transition-all duration-300"
@@ -98,6 +104,7 @@ export default function Header() {
           type="button"
           className="flex lg:hidden justify-center items-center px-6 py-8 md:px-10 md:py-12 hover:opacity-50 active:opacity-25 transition-opacity duration-300 cursor-pointer"
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
           aria-label="Toggle Mobile Menu"
           onClick={toggleMenu}
         >

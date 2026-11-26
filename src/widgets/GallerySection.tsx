@@ -3,25 +3,25 @@ const GALLERY_DATA = [
     id: 1,
     imgURLMob: "/img/mobile/image-gallery-milkbottles.jpg",
     imgURLDesk: "/img/desktop/image-gallery-milkbottles.jpg",
-    alt: "The milkbottles on the blue background.",
+    alt: "The milkbottles on a blue background.",
   },
   {
     id: 2,
     imgURLMob: "/img/mobile/image-gallery-orange.jpg",
     imgURLDesk: "/img/desktop/image-gallery-orange.jpg",
-    alt: "The orange on the plate.",
+    alt: "The orange on a plate.",
   },
   {
     id: 3,
     imgURLMob: "/img/mobile/image-gallery-cone.jpg",
     imgURLDesk: "/img/desktop/image-gallery-cone.jpg",
-    alt: "The cone on the blue background.",
+    alt: "The cone on a blue background.",
   },
   {
     id: 4,
     imgURLMob: "/img/mobile/image-gallery-sugar-cubes.jpg",
     imgURLDesk: "/img/desktop/image-gallery-sugarcubes.jpg",
-    alt: "The ice cube structure on the red background.",
+    alt: "Sugar cubes on a red background.",
   },
 ];
 

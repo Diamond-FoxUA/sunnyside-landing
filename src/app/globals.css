@@ -21,10 +21,6 @@
   --color-grey-950: #24303e;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--color-white);
   color: var(--color-grey-550);
