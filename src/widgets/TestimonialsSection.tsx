@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
               src={t.avatarURL}
               width={t.imgSize}
               height={t.imgSize}
-              alt="Avatar"
+              alt=""
               className="mb-6.5 rounded-full lg:mb-0"
             />
             <p className="text-[18px] font-semibold leading-[165%] text-grey-600 lg:pb-3.5">
