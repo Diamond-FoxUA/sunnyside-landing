@@ -9,7 +9,7 @@ export default function TransformSection() {
       data-header-theme="yellow"
     >
       <div className="w-full lg:order-last">
-        <picture>
+        <picture className="block w-full h-full">
           <source
             media="(min-width: 1440px)"
             srcSet="/img/desktop/image-transform.jpg"
@@ -18,7 +18,7 @@ export default function TransformSection() {
           <img
             src="/img/mobile/image-transform.jpg"
             alt="An egg on the yellow background."
-            className="w-full object-cover"
+            className="block w-full object-cover"
             fetchPriority="high"
           />
         </picture>

@@ -9,16 +9,18 @@ export default function StandOutSection() {
       className="flex flex-col lg:grid lg:grid-cols-2 lg:place-items-center w-full max-w-360 items-center justify-center scroll-mt-24"
     >
       <div className="w-full">
-        <picture>
+        <picture className="block w-full h-full">
           <source
             media="(min-width: 1440px)"
             srcSet="/img/desktop/image-stand-out.jpg"
+            width={375}
+            height={375}
           />
 
           <img
             src="/img/mobile/image-stand-out.jpg"
             alt="Red vineglass on the red background."
-            className="w-full object-cover"
+            className="block w-full object-cover"
             fetchPriority="high"
           />
         </picture>

@@ -38,12 +38,14 @@ export default function GallerySection() {
 
       <div className="w-full grid grid-cols-2 lg:grid-cols-4">
         {GALLERY_DATA.map((image) => (
-          <picture key={image.id}>
+          <picture key={image.id} className="block w-full h-full">
             <source media="(min-width: 1440px)" srcSet={image.imgURLDesk} />
             <img
               src={image.imgURLMob}
               alt={image.alt}
-              className="w-full object-cover lg:w-90 lg:h-111.75"
+              width={375}
+              height={375}
+              className="w-full object-cover block lg:w-90 lg:h-111.75"
             />
           </picture>
         ))}
