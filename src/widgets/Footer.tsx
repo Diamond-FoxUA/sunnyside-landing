@@ -36,7 +36,7 @@ export default function Footer() {
                 key={navItem.id}
                 className="text-[18px] text-green-500 hover:text-white active:text-white/25 font-semibold leading-[165%] transition-colors duration-300"
               >
-                <a href={`#${navItem.id}`}>{navItem.title}</a>
+                <a href={`#`}>{navItem.title}</a>
               </li>
             ))}
           </ul>

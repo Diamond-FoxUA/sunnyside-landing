@@ -12,7 +12,7 @@ export default function Navigation({ onClose }: NavigationProps) {
         {NAV_ITEMS.map((navItem) => (
           <li key={navItem.id}>
             <a
-              href={`#${navItem.id}`}
+              href={`#`}
               onClick={onClose}
               className="lg:text-white text-[20px] lg:text-[18px] text-center font-semibold leading-[125%] lg:leading-[165%] lg:py-5 hover:opacity-50 active:opacity-25 transition-opacity duration-300"
             >
